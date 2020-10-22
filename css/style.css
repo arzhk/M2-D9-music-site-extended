@@ -114,6 +114,10 @@ a:hover {
   color: #00ff73 !important;
 }
 
+.white-txt {
+  color: #f3f3f4 !important;
+}
+
 .nav-link {
   margin: 0px 25px;
   font-size: 0.9em;
@@ -252,4 +256,18 @@ footer .row {
 
 footer a:hover {
   color: #00ff73;
+}
+
+.breadcrumb-content-container {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  right: -1px;
+  background-color: #1b1b1b;
+}
+
+.breadcrumb {
+  background-color: #1b1b1b;
+  border: 1px solid #00ff73;
+  box-shadow: 0px -3px 20px rgba(0, 0, 0, 0.4);
 }

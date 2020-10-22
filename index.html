@@ -1,95 +1,94 @@
-<!--
-ASSIGNMENT RULES
-- The solution must be pushed to the repository and be available for the tutors by the end of the day.
-- You can ask for tutor's help.
-- You can google / use StackOverflow BUT we suggest you to use just the material provided.
-- To test the page, just open it with your default browser.
-- Use Bootstrap4 classes to render the page.
-- Use correctly containers and rows in order to achieve a great display.
-ASSIGNMENT TOPIC
-You are creating a website to showcase your favourite music albums.
-In this page you'd like to have a short bio of yourself, the top albums of your life, 
-the worst album you ever listen to and everything related to the music you love.
-NOTE:
-Most of the times, even the most expert of designers needs inspiration.
-Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
-Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
--->
-
-<!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
-<!--
-        /* EXERCISE 1 (DONE)
-              For all Albums we'd like to have a consistent style.
-              Create a class for:
-              - The album container
-              - The album cover
-              - The album title
-              - The album group / singer / dj
-              - The album genre
-              - The album duration
-              - etc
-           */
-
-    -->
-
-<!-- EXERCISE 2 (DONE)
-            Implement a navigation bar using the bootstrap component
-            This navigation bar must be linked to every section in your page
+   <!-- EXERCISE 1
+        Use the specific bootstrap component to implement a Breadcrumb
         -->
 
-<!-- EXERCISE 3 (DONE)
-            Create a responsive section for your favourite albums.
-            In this section you should have:
-            - 4 albums per row when the screen is very large
-            - 3 albums per row when you are on a tablet (or a smaller window)
-            - 2 albums per row when you are on a small screen
+    <!-- EXERCISE 2
+            Create a Jumbotron section with a quick explanation / image of the website
         -->
 
-<!-- EXERCISE 4
-            Create a section for the album review.
-            Pick one of your fav albums, and create a section with:
-            - Cover
-            - Title
-            - Band
-            - Lenght
-            - Genre
-            - Tracklist
-            - ... And whatever you think it's interesting about it!
+    <!-- EXERCISE 3
+            Foreach album in the favorite list, place the genre inside a badge
         -->
 
-<!-- EXERCISE 5 (DONE)
-            Worst album list! Find out the music you don't really like or you find overrated and list it
-            in this "hall of shame" chart!
+    <!-- EXERCISE 4
+            Foreach album in the favorite list, use the Bootstrap Card to contain it.
+            Use card layouts to format it in the best and more compatible way.
         -->
 
-<!-- EXERCISE 6
-            Do you have any musician / band you admire or you are fan of?
-            This section is dedicated to him / her / them!
-            Feel free to experiment in this part of the page.
+    <!-- EXERCISE 5
+            Place the tracklist inside a Bootstrap table.
+            The row column must be alternate.
+            Use one column for the track order, one of the title and one for the length.
+            (If you want, you can also add extra columns)
         -->
 
-<!-- EXERCISE 7
-            Just covers!
-            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
-            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+    <!-- EXERCISE 6
+            Add a DELETE bootstrap button on each row of the tracklist, with appropriate transitions on the various pseudo-class states 
+            which will apply for the subsequent button you'll use.
+            Clicking on the button the row must disappear. 
+            Add a fade-out effect using a CSS transition effect
         -->
 
-<!-- EXERCISE 8 (DONE)
-            Implement a footer with some information / social links
+    <!-- EXERCISE 7
+            Add a "Contact Me" form in the footer.
+            The "Contact Me" form has 2 fields:
+            - Email
+            - Text of the message
+            Use the correct Bootstrap styles for styling the buttons
         -->
 
-<!-- EXTRA:
-         EXERCISE 9
-            Create album details that are going to be toggled on and off by clicking on the album image
+    <!-- EXERCISE 8 
+            Add to the footer an extra column with the same links of the top nav.
         -->
 
-<!-- EXERCISE 10
-            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+    <!-- EXERCISE 9
+            Add a button "Add Track" under the track list the album, add a nice shadow transition when the button is hovered
         -->
 
-<!--
-            EXERCISE 11
-            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+    <!-- EXERCISE 10
+            On "Add Track" button, open a new modal.
+            The modal shall contain a form with:
+            - Track number
+            - Track name
+            - Track length
+            - Track featuring
+            - Live Track (checkbox)
+            The fields should be inside an Input Group and divided in 2 columns.
+        -->
+
+    <!-- EXERCISE 11
+            Add 2 bootstrap buttons at the bottom of the modal window:
+            - Close => clear the fields and close the modal
+            - Add => Add the track to the list of tracks in the main page and display an alert success message 
+            - The new list-element added to the list will appear with a fade-in transition effect
+            https://getbootstrap.com/docs/4.4/components/alerts/
+            [EXTRA] Make the message disappear after 5 seconds
+            https://www.w3schools.com/jsref/met_win_settimeout.asp
+        -->
+
+    <!-- EXERCISE 12
+            All the field (except for Feat. and Live Track) are required fields and requires validation.
+            If the user clicks on the Add button and some fields are empty, a warning alert must be show
+        -->
+
+    <!-- ############### -->
+    <!-- ###  EXTRA  ### -->
+    <!-- ############### -->
+
+    <!-- EXERCISE 13
+            For each "Album cover" in your page, add a tooltip with the title
+        -->
+
+    <!-- EXERCISE 14
+            Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
+        -->
+
+    <!-- EXERCISE 15
+            Add a Album Carousel with controls to display the top 10 albums
+        -->
+
+    <!-- EXERCISE 16
+            Make every section of the page "collapsable" if the user clicks on the section title
         -->
 
 <!DOCTYPE html>
@@ -109,6 +108,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
     rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/hover-min.css" media="all" />
+  <script src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/e1d9c73c9c.js" crossorigin="anonymous"></script>
 
   <title>M2-D2</title>
@@ -127,24 +127,36 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
           id="collapsibleNavId">
         <ul class="navbar-nav mr-0 mt-0">
           <li class="nav-item active"><span class="green txt-small d-inline-block">//</span>
-            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#home">HOME<span class="sr-only">(current)</span></a>
+            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#home" onclick="navActive()">HOME<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item"><span class="green txt-small">//</span>
-            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#vibe">VIBE</a>
+            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#vibe" onclick="navActive()">VIBE</a>
           </li>
           <li class="nav-item"><span class="green txt-small">//</span>
-            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#strive">STRIVE</a>
+            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#strive" onclick="navActive()">STRIVE</a>
           </li>
           <li class="nav-item"><span class="green txt-small">//</span>
-            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#unwind">UNWIND</a>
+            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#unwind" onclick="navActive()">UNWIND</a>
           </li>
           <li class="nav-item"><span class="green txt-small">//</span>
-            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#hallofshame">HALL OF SHAME</a>
+            <a class="nav-link hvr-underline-from-center mx-0 mx-sm-2 mx-md-3" href="#hallofshame" onclick="navActive()">HALL OF SHAME</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- ****************** BREADCRUMB SECTION ****************** -->
+  <div class="breadcrumb-content-container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb m-0">
+        <li class="breadcrumb-item"><a href="#home">Home</a></li>
+        <li class="breadcrumb-item active white-txt" aria-current="page"><!--INSERT CURRENT LOCATION--></li>
+      </ol>
+    </nav>
+  </div>
+
+
 
   <!-- ****************** HOME SECTION ****************** -->
   <section id="home" class="jumbotron justify-content-center align-items-center">
