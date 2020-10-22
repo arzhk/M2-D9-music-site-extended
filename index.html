@@ -1,0 +1,408 @@
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day.
+- You can ask for tutor's help.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+<!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+<!--
+        /* EXERCISE 1 (DONE)
+              For all Albums we'd like to have a consistent style.
+              Create a class for:
+              - The album container
+              - The album cover
+              - The album title
+              - The album group / singer / dj
+              - The album genre
+              - The album duration
+              - etc
+           */
+
+    -->
+
+<!-- EXERCISE 2 (DONE)
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+
+<!-- EXERCISE 3 (DONE)
+            Create a responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller window)
+            - 2 albums per row when you are on a small screen
+        -->
+
+<!-- EXERCISE 4
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+
+<!-- EXERCISE 5 (DONE)
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+<!-- EXERCISE 6
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+<!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+<!-- EXERCISE 8 (DONE)
+            Implement a footer with some information / social links
+        -->
+
+<!-- EXTRA:
+         EXERCISE 9
+            Create album details that are going to be toggled on and off by clicking on the album image
+        -->
+
+<!-- EXERCISE 10
+            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+        -->
+
+<!--
+            EXERCISE 11
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Vibe. Unwind. Strive.-->
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hover-min.css" media="all" />
+  <script src="https://kit.fontawesome.com/e1d9c73c9c.js" crossorigin="anonymous"></script>
+
+  <title>M2-D2</title>
+</head>
+
+<body>
+
+  <!-- ****************** NAVIGATION SECTION ****************** -->
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top">
+    <div class="container">
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse
+          id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active"><span class="green txt-small d-inline-block">//</span>
+            <a class="nav-link hvr-underline-from-center" href="#home">HOME<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><span class="green txt-small">//</span>
+            <a class="nav-link hvr-underline-from-center" href="#vibe">VIBE</a>
+          </li>
+          <li class="nav-item"><span class="green txt-small">//</span>
+            <a class="nav-link hvr-underline-from-center" href="#strive">STRIVE</a>
+          </li>
+          <li class="nav-item"><span class="green txt-small">//</span>
+            <a class="nav-link hvr-underline-from-center" href="#unwind">UNWIND</a>
+          </li>
+          <li class="nav-item"><span class="green txt-small">//</span>
+            <a class="nav-link hvr-underline-from-center" href="#hallofshame">HALL OF SHAME</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ****************** HOME SECTION ****************** -->
+  <section id="home" class="jumbotron justify-content-center align-items-center">
+    <div class="container">
+      <h1 class="display-3 font-weight-bold">
+        VIBE<span class="green"></span>
+      </h1>
+      <h1 class="display-3 font-weight-bold">
+        STRIVE<span class="green"></span>
+      </h1>
+      <h1 class="display-3 font-weight-bold">
+        UNWIND<span class="green">.</span>
+      </h1>
+      <p class="lead font-weight-light green">Tunes for every moment</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#vibe" role="button">Lets Go</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ****************** VIBE SECTION ****************** -->
+  <section id="vibe">
+    <div class="container">
+      <div class="row align-items-baseline">
+        <h3 class="font-weight-bold">Vibe<span class="green">.</span></h3>
+        <h4>For the party</h4>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1020/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #1</h5>
+              <p class="card-text">I got that</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1004/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #2</h5>
+              <p class="card-text">Boom</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1011/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #3</h5>
+              <p class="card-text">Boom</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1025/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #4</h5>
+              <p class="card-text">Pow</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ****************** STRIVE SECTION ****************** -->
+  <section id="strive">
+    <div class="container">
+      <div class="row align-items-baseline">
+        <h3 class="font-weight-bold w-txt">Strive<span class="green">.</span></h3>
+        <h4>For the grind</h4>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card dark-bg">
+            <img src="https://picsum.photos/id/1026/500" class="card-img-top card-brdr-gr" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #1</h5>
+              <p class="card-text green">Apple bottoms</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right-d">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card dark-bg">
+            <img src="https://picsum.photos/id/1031/500" class="card-img-top card-brdr-gr" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #2</h5>
+              <p class="card-text green">Jeans</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right-d">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card dark-bg">
+            <img src="https://picsum.photos/id/1035/500" class="card-img-top card-brdr-gr" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #3</h5>
+              <p class="card-text green">Jeans</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right-d">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card dark-bg">
+            <img src="https://picsum.photos/id/1042/500" class="card-img-top card-brdr-gr" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #4</h5>
+              <p class="card-text green">Boots with the fur</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right-d">Tracklist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ****************** UNWIND SECTION ****************** -->
+  <section id="unwind">
+    <div class="container">
+      <div class="row align-items-baseline">
+        <h3 class="font-weight-bold">Unwind<span class="green">.</span></h3>
+        <h4>For the calm before the storm</h4>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1048/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #1</h5>
+              <p class="card-text">And</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1049/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #2</h5>
+              <p class="card-text">I</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1052/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #3</h5>
+              <p class="card-text">Will</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card">
+            <img src="https://picsum.photos/id/1055/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #4</h5>
+              <p class="card-text">Always love you</p>
+              <a href="#" class="btn btn-primary hvr-sweep-to-right">Tracklist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ****************** HALL OF SHAME SECTION ****************** -->
+  <section id="hallofshame" class="green-bg">
+    <div class="container">
+      <div class="row align-items-baseline">
+        <h3 class="font-weight-bold">Hall of Shame.</h3>
+        <h4>For... well... <span class="font-weight-bold">never</span></h4>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card green-bg">
+            <img src="https://picsum.photos/id/100/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #1</h5>
+              <p class="card-text">Never</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card green-bg">
+            <img src="https://picsum.photos/id/1004/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #2</h5>
+              <p class="card-text">Gonna</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card green-bg">
+            <img src="https://picsum.photos/id/1081/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #3</h5>
+              <p class="card-text">Give</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+          <div class="card green-bg">
+            <img src="https://picsum.photos/id/1015/500" class="card-img-top card-brdr-bl" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Album #4</h5>
+              <p class="card-text">You up</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ****************** FOOTER SECTION ****************** -->
+  <footer>
+    <div class="container">
+      <h5>Vibe<span class="green">.</span> Strive<span class="green">.</span> Unwind<span class="green">.</span></h5>
+      <h6>Follow me on social media</h6>
+      <div class="row">
+        <div class="col-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="col-3">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="col-3">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="col-3">
+          <a href="https://github.com/arzhk"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="green">Created by Aaron Rizhik</p>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
