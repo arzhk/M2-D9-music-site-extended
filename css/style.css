@@ -365,3 +365,26 @@ thead {
 .table-dark {
   background: none;
 }
+
+.delete-row {
+  border: none;
+  background-color: #00ff73;
+  color: #1b1b1b;
+  outline: none !important;
+  border-radius: 20px;
+  padding: 0px 7px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-left: 2px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.delete-row:hover {
+  transform: scale(1.1);
+  background-color: #00ad4e;
+}
+
+.fade-out {
+  opacity: 0;
+}

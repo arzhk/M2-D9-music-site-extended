@@ -204,6 +204,14 @@ function generateTableHead() {
   modalBody.appendChild(albumTable);
 }
 
+function deleterow() {
+  let currentRow = event.currentTarget.parentNode;
+  event.currentTarget.parentNode.classList.add("fade-out");
+  setTimeout(function (e) {
+    currentRow.remove();
+  }, 400);
+}
+
 function generateTableBody() {
   const albumTable = document.querySelector("table");
   const albumTableB = document.createElement("tbody");
@@ -224,7 +232,8 @@ function generateTableBody() {
     albumTableNewRow.innerHTML +=
       `<th scope="row">${i}</th>` +
       `<td>${albumDB[selectedAlbum].tracklist[i - 1]}</td>` +
-      `<td class="text-right">${randomTime}</td>`;
+      `<td class="text-right">${randomTime}</td>` +
+      `<button class="delete-row" onclick="deleterow()">x</button>`;
     albumTableB.appendChild(albumTableNewRow);
     albumTable.appendChild(albumTableB);
   }
