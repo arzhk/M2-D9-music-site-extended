@@ -210,10 +210,21 @@ function generateTableBody() {
 
   for (let i = 1, j = 0; i < albumDB[selectedAlbum].tracklist.length + 1; i++) {
     const albumTableNewRow = document.createElement("tr");
+    let randomTimeA = Math.floor(Math.random() * 4) + 1;
+    let randomTimeB = Math.floor(Math.random() * 60);
+    let randomTimeC = Math.floor(Math.random() * 60);
+    if (randomTimeB < 10) {
+      randomTimeB = "0" + randomTimeB;
+    }
+    if (randomTimeC < 10) {
+      randomTimeC = "0" + randomTimeC;
+    }
+    let randomTime = "0" + randomTimeA + ":" + randomTimeB + ":" + randomTimeC;
+
     albumTableNewRow.innerHTML +=
       `<th scope="row">${i}</th>` +
       `<td>${albumDB[selectedAlbum].tracklist[i - 1]}</td>` +
-      `<td class="text-right">01:00:00</td>`;
+      `<td class="text-right">${randomTime}</td>`;
     albumTableB.appendChild(albumTableNewRow);
     albumTable.appendChild(albumTableB);
   }
